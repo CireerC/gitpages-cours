@@ -1,0 +1,26 @@
+﻿---
+layout: default
+---
+
+<article class="course-sheet">
+  <header class="course-header">
+    <p class="course-kicker">Fiche de cours</p>
+    <h1 class="course-title">{{ page.title }}</h1>
+    <div class="course-meta">
+      {% if page.semestre %}
+      <span class="badge badge-semestre">{{ page.semestre }}</span>
+      {% endif %}
+      {% if page.type_cours %}
+      <span class="badge badge-type">{{ page.type_cours }}</span>
+      {% endif %}
+      {% if page.tags %}
+      <span class="badge badge-tags">{{ page.tags | join: " | " }}</span>
+      {% endif %}
+    </div>
+  </header>
+
+  <section class="course-content">
+    {{ content }}
+  </section>
+</article>
+

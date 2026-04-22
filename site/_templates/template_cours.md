@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: course
 title: "Nom du cours"
 semestre: "S1"
 type_cours: "tronc commun"
@@ -7,8 +7,6 @@ tags:
   - cours
   - template
 ---
-
-# Nom du cours
 
 ## Informations
 - `Semestre` : S1

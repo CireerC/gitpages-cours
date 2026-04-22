@@ -2,3 +2,6 @@ title: "GitPages Cours"
 description: "Bibliotheque personnelle de cours et de ressources"
 theme: minima
 markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM

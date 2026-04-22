@@ -1,5 +1,5 @@
 ﻿---
-layout: default
+layout: course
 title: "Algo en C - Cookies"
 semestre: "S5"
 type_cours: "dev"
@@ -9,8 +9,6 @@ tags:
   - reseaux
   - http
 ---
-
-# Algo en C - Cookies
 
 ## Informations
 - `Semestre` : S5
