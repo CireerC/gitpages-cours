@@ -752,6 +752,227 @@ a:hover {
   }
 }
 
+/* -- Course layout with TOC -------------------------------------------------- */
+.course-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 1.6rem;
+  align-items: start;
+}
+
+/* -- Table des matières ------------------------------------------------------ */
+.course-toc {
+  position: sticky;
+  top: 1rem;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.75rem 0.85rem;
+  font-size: 0.83rem;
+  order: 2;
+}
+
+.toc-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.67rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+}
+
+#toc-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#toc-list .toc-item {
+  margin: 0;
+}
+
+#toc-list .toc-item a {
+  display: block;
+  padding: 0.22rem 0.4rem;
+  border-radius: 4px;
+  color: var(--muted);
+  border-bottom: none;
+  transition: color 0.12s, background 0.12s;
+  line-height: 1.35;
+}
+
+#toc-list .toc-item a:hover,
+#toc-list .toc-item a.toc-active {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+#toc-list .toc-h3 a {
+  padding-left: 1.1rem;
+  font-size: 0.8rem;
+}
+
+/* -- Collapsible sections ---------------------------------------------------- */
+.course-content details {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 0.1rem 0.9rem 0.1rem;
+  margin: 0.8rem 0;
+  background: var(--paper);
+}
+
+.course-content details[open] {
+  padding-bottom: 0.6rem;
+}
+
+.course-content details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--title);
+  padding: 0.55rem 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  user-select: none;
+}
+
+.course-content details summary::-webkit-details-marker { display: none; }
+
+.course-content details summary::before {
+  content: "›";
+  font-size: 1rem;
+  color: var(--accent);
+  transition: transform 0.18s;
+  display: inline-block;
+}
+
+.course-content details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+/* -- KaTeX overrides --------------------------------------------------------- */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0;
+}
+
+/* -- Hero section (home page) ------------------------------------------------ */
+.hero {
+  background: linear-gradient(135deg, var(--accent-soft) 0%, var(--paper) 60%);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 2rem 2.2rem 1.8rem;
+  margin-bottom: 1.6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-kicker {
+  margin: 0 0 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.hero-title {
+  margin: 0 0 0.6rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--title);
+  line-height: 1.15;
+}
+
+.hero-subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 520px;
+  line-height: 1.55;
+}
+
+/* -- Semester section headings ----------------------------------------------- */
+.semester-section {
+  margin-top: 1.6rem;
+}
+
+.semester-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.7rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--title);
+}
+
+.semester-section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+/* -- Course cards ------------------------------------------------------------ */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-card {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.8rem 0.95rem;
+  background: var(--paper);
+  box-shadow: 0 1px 4px var(--shadow-sm);
+  text-decoration: none;
+  color: var(--ink);
+  border-bottom: none;
+  transition: box-shadow 0.16s, border-color 0.16s, transform 0.14s;
+}
+
+.course-card:hover {
+  box-shadow: 0 4px 14px var(--shadow-md);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  color: var(--title);
+  border-bottom: none;
+}
+
+.course-card-title {
+  margin: 0 0 0.3rem;
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: var(--title);
+  line-height: 1.3;
+}
+
+.course-card-type {
+  font-size: 0.73rem;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+}
+
 /* -- Print ------------------------------------------------------------------- */
 @media print {
   .app-sidebar,
@@ -759,11 +980,13 @@ a:hover {
   .site-footer,
   .reading-progress,
   .sidebar-toggle,
-  .breadcrumb {
+  .breadcrumb,
+  .course-toc {
     display: none !important;
   }
 
-  .app-shell {
+  .app-shell,
+  .course-layout {
     grid-template-columns: 1fr;
   }
 
@@ -776,6 +999,20 @@ a:hover {
   a {
     color: inherit;
     border-bottom: none;
+  }
+}
+
+/* -- Responsive TOC ---------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .course-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .course-toc {
+    position: static;
+    max-height: none;
+    order: -1;
+    margin-bottom: 1rem;
   }
 }
 

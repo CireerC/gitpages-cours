@@ -1,4 +1,4 @@
-﻿---
+---
 layout: app
 ---
 
@@ -7,10 +7,10 @@ layout: app
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <a href="{{ '/' | relative_url }}">Accueil</a>
     {% if page.semestre %}
-    <span class="breadcrumb-sep" aria-hidden="true">></span>
-    <span>{{ page.semestre }}</span>
+    <span class="breadcrumb-sep" aria-hidden="true">›</span>
+    <a href="{{ '/' | relative_url }}#{{ page.semestre | downcase }}">{{ page.semestre }}</a>
     {% endif %}
-    <span class="breadcrumb-sep" aria-hidden="true">></span>
+    <span class="breadcrumb-sep" aria-hidden="true">›</span>
     <span>{{ page.title }}</span>
   </nav>
 
@@ -32,10 +32,18 @@ layout: app
     </div>
   </header>
 
-  <section class="course-content">
-    {{ content }}
-  </section>
+  <div class="course-layout">
+
+    <!-- Table des matières générée automatiquement par toc.js -->
+    <nav class="course-toc" id="course-toc" aria-label="Table des matières">
+      <p class="toc-title">Table des matières</p>
+      <ul id="toc-list"></ul>
+    </nav>
+
+    <section class="course-content">
+      {{ content }}
+    </section>
+
+  </div>
 
 </article>
-
-
