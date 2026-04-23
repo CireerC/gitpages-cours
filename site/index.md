@@ -3,19 +3,41 @@ layout: app
 title: "Accueil"
 ---
 
-# Bibliotheque de cours
+# Bibliotheque de cours et ressources
 
-Un espace unique pour centraliser tes cours, tes resumes et tes references.
+Un site personnel pour centraliser les cours, resumes et references techniques.
 
-## Demarrage rapide
-1. Ouvre le menu a gauche et choisis le cours.
-2. Pour ajouter un nouveau cours, suis la section ci-dessous.
-3. Mets a jour `site/_data/navigation.yml` pour l'ajouter au menu.
+<section class="home-grid">
+  <article class="home-card">
+    <h2>Navigation rapide</h2>
+    <p>Utilise le menu de gauche pour ouvrir un cours par semestre.</p>
+    <ul>
+      <li>Acces direct aux cours</li>
+      <li>Categorie par type de matiere</li>
+      <li>Ajout evolutif au fil des semestres</li>
+    </ul>
+  </article>
 
-## Acces par semestre
+  <article class="home-card">
+    <h2>Structure du projet</h2>
+    <ul>
+      <li><code>site/cours/</code> pour les cours</li>
+      <li><code>site/ressources/</code> pour les fiches transverses</li>
+      <li><code>site/_templates/</code> pour les modeles</li>
+      <li><code>site/_data/navigation.yml</code> pour le menu gauche</li>
+    </ul>
+  </article>
+</section>
 
-### S5
-- [Algo en C - Cookies](cours/S5/Algo%20En%20C/cookies.html)
+## Semestres
+
+<section class="semester-grid">
+  <article class="semester-card">
+    <h3>S5</h3>
+    <p>1 cours reference actuellement.</p>
+    <a href="cours/S5/Algo%20En%20C/cookies.html">Algo en C - Cookies</a>
+  </article>
+</section>
 
 ## Ajouter un cours
 <a id="ajouter-un-cours"></a>
@@ -23,7 +45,5 @@ Un espace unique pour centraliser tes cours, tes resumes et tes references.
 1. Copier `site/_templates/template_cours.md`.
 2. Creer le fichier dans `site/cours/SX/Nom Du Cours/`.
 3. Remplir les metadonnees (`title`, `semestre`, `type_cours`, `tags`).
-4. Ajouter le cours dans `site/_data/navigation.yml` pour le voir dans le menu gauche.
-
-## Ressources
-- Dossier ressources: `site/ressources/`
+4. Ajouter le lien dans `site/_data/navigation.yml`.
+5. Commit puis push pour publier.

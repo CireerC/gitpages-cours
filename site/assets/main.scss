@@ -2,47 +2,54 @@
 ---
 @import "minima";
 
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap");
 
 :root {
   --bg: #ffffff;
   --surface: #ffffff;
-  --text: #111111;
-  --muted: #5a5a5a;
-  --border: #d6d6d6;
-  --code-bg: #f5f5f5;
-  --code-text: #111111;
-  --inline-code-bg: #f0f0f0;
+  --text: #2f3136;
+  --muted: #6b6f76;
+  --heading: #1f2937;
+  --border: #e3e6ea;
+  --border-strong: #d5d9df;
+  --accent: #3f5d7d;
+  --accent-soft: #f5f8fb;
+  --code-bg: #f7f8fa;
+  --code-text: #22252a;
 }
 
 body {
   background: var(--bg);
   color: var(--text);
   font-family: "Source Sans 3", "Segoe UI", sans-serif;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 
 .site-header,
 .site-footer {
-  background: var(--surface);
   border-color: var(--border);
+  background: var(--surface);
+}
+
+.site-title,
+.site-title:visited,
+.site-nav .page-link {
+  color: var(--heading);
 }
 
 .wrapper {
-  max-width: 1600px;
-  width: 97%;
-  padding-right: 0;
-  padding-left: 0;
+  max-width: 1400px;
+  width: 95%;
 }
 
 .page-content {
-  padding-top: 1rem;
+  padding: 1rem 0 1.2rem;
 }
 
 .app-shell {
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
-  gap: 1.2rem;
+  grid-template-columns: 310px minmax(0, 1fr);
+  gap: 1.4rem;
   align-items: start;
 }
 
@@ -51,67 +58,97 @@ body {
   top: 1rem;
   max-height: calc(100vh - 2rem);
   overflow: auto;
-  padding-right: 0.25rem;
+  padding-right: 0.2rem;
 }
 
 .sidebar-nav {
   border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 0.75rem;
+  border-radius: 8px;
+  padding: 0.85rem;
   background: var(--surface);
 }
 
-.sidebar-title {
-  margin: 0 0 0.6rem;
+.profile-card {
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 0.75rem 0.8rem;
+  background: var(--accent-soft);
+  margin-bottom: 0.75rem;
+}
+
+.profile-eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+
+.profile-name {
+  margin: 0.2rem 0 0.25rem;
+  font-size: 1.08rem;
+  color: var(--heading);
+}
+
+.profile-bio {
+  margin: 0;
   font-size: 0.92rem;
-  font-weight: 700;
+  color: #4d5561;
+}
+
+.sidebar-title {
+  margin: 0 0 0.52rem;
+  color: var(--heading);
+  font-size: 0.92rem;
 }
 
 .sidebar-link,
 .sidebar-nav a {
   display: block;
-  color: var(--text);
   text-decoration: none;
+  color: var(--text);
   border: 1px solid transparent;
   border-radius: 5px;
-  padding: 0.34rem 0.45rem;
-  margin-bottom: 0.2rem;
+  padding: 0.35rem 0.45rem;
+  margin-bottom: 0.18rem;
 }
 
 .sidebar-link:hover,
 .sidebar-nav a:hover {
-  background: #f6f6f6;
+  background: #f8fafc;
 }
 
-.sidebar-nav a.active,
-.sidebar-link.active {
-  border-color: var(--border);
-  background: #f2f2f2;
+.sidebar-link.active,
+.sidebar-nav a.active {
+  border-color: var(--border-strong);
+  background: #f6f8fb;
+  color: #1e293b;
   font-weight: 700;
 }
 
 .sidebar-group {
-  border-top: 1px solid var(--border);
   margin-top: 0.45rem;
   padding-top: 0.45rem;
+  border-top: 1px solid var(--border);
 }
 
 .sidebar-group summary {
   cursor: pointer;
   font-weight: 700;
-  margin-bottom: 0.4rem;
+  color: var(--heading);
+  margin-bottom: 0.35rem;
 }
 
 .sidebar-group ul {
-  margin: 0;
-  padding-left: 0;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .course-type {
   color: var(--muted);
   font-size: 0.78rem;
-  margin-left: 0.35rem;
+  margin-left: 0.3rem;
 }
 
 .app-main {
@@ -119,63 +156,88 @@ body {
 }
 
 .course-sheet {
-  border: none;
-  padding: 0;
-  box-shadow: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.15rem 1.1rem;
+  background: var(--surface);
 }
 
 .course-header {
   border-bottom: 1px solid var(--border);
-  margin-bottom: 1rem;
-  padding-bottom: 0.7rem;
+  margin-bottom: 0.95rem;
+  padding-bottom: 0.72rem;
 }
 
 .course-kicker {
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
+  font-size: 0.74rem;
   color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 600;
+}
+
+.course-title,
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  color: var(--heading);
+  font-family: "Lora", "Georgia", serif;
 }
 
 .course-title {
-  margin: 0.15rem 0 0.55rem;
-  font-size: 2.1rem;
-  line-height: 1.2;
-  font-weight: 700;
-  color: var(--text);
+  margin: 0.2rem 0 0.55rem;
+  font-size: 2rem;
+  line-height: 1.22;
 }
 
 .course-meta {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.4rem;
+  flex-wrap: wrap;
 }
 
 .badge {
-  display: inline-block;
-  font-weight: 600;
-  font-size: 0.75rem;
-  border-radius: 999px;
-  padding: 0.2rem 0.55rem;
-  color: var(--text);
-  background: #f2f2f2;
   border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.15rem 0.52rem;
+  font-size: 0.77rem;
+  background: #fafbfc;
+  color: #425166;
+}
+
+.home-grid,
+.semester-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin: 0.65rem 0 1rem;
+}
+
+.home-card,
+.semester-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.8rem 0.9rem;
+  background: var(--surface);
+}
+
+.home-card h2,
+.semester-card h3 {
+  margin-top: 0;
 }
 
 blockquote {
-  background: #fafafa;
-  border-left: 4px solid #bdbdbd;
-  padding: 0.6rem 0.9rem;
-  color: #2e2e2e;
-  border-radius: 0;
+  border-left: 3px solid #c4cbd3;
+  background: #fafbfc;
+  color: #3c4654;
+  margin-left: 0;
+  padding: 0.55rem 0.82rem;
 }
 
 code,
 pre,
 .highlight {
-  font-family: "JetBrains Mono", "Consolas", "Cascadia Code", monospace;
+  font-family: "JetBrains Mono", "Consolas", monospace;
 }
 
 pre,
@@ -185,97 +247,70 @@ pre,
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 0.85rem 0.95rem;
-  line-height: 1.6;
   overflow-x: auto;
-  box-shadow: none;
+  line-height: 1.58;
 }
 
 p code,
 li code,
 td code {
-  background: var(--inline-code-bg);
-  color: #111111;
-  border: 1px solid #d8d8d8;
-  padding: 0.08rem 0.35rem;
+  background: #f1f3f6;
+  border: 1px solid #dde2e8;
   border-radius: 4px;
-  font-size: 0.92em;
-}
-
-.post-content h1,
-.post-content h2,
-.post-content h3,
-.post-content h4 {
-  color: var(--text);
-  font-weight: 700;
+  padding: 0.05rem 0.32rem;
+  color: #1f2a37;
 }
 
 table {
   border: 1px solid var(--border);
-  border-radius: 4px;
+  border-radius: 6px;
   overflow: hidden;
 }
 
 th {
-  background: #f4f4f4;
+  background: #f7f9fc;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0f0f0f;
-    --surface: #0f0f0f;
-    --text: #f3f3f3;
-    --muted: #b7b7b7;
-    --border: #3a3a3a;
-    --code-bg: #171717;
-    --code-text: #f3f3f3;
-    --inline-code-bg: #1d1d1d;
-  }
-
-  .site-header,
-  .site-footer {
-    background: #0f0f0f;
-    border-color: var(--border);
-  }
-
-  .badge {
-    background: #1c1c1c;
-    border-color: #3a3a3a;
+    --bg: #111315;
+    --surface: #15181b;
+    --text: #dfe3e8;
+    --muted: #a7b0ba;
+    --heading: #f0f3f7;
+    --border: #2a3037;
+    --border-strong: #38424d;
+    --accent: #9bb7d7;
+    --accent-soft: #191f25;
+    --code-bg: #191e24;
+    --code-text: #e7ebf0;
   }
 
   .sidebar-link:hover,
   .sidebar-nav a:hover {
-    background: #1a1a1a;
+    background: #1b2128;
   }
 
-  .sidebar-nav a.active,
-  .sidebar-link.active {
-    background: #1d1d1d;
-    border-color: #3a3a3a;
-  }
-
-  blockquote {
-    background: #181818;
-    color: #dfdfdf;
-    border-left-color: #7a7a7a;
+  .sidebar-link.active,
+  .sidebar-nav a.active {
+    background: #1c232b;
+    color: #f0f3f7;
   }
 
   p code,
   li code,
   td code {
-    color: #f3f3f3;
-    border-color: #3d3d3d;
+    background: #1b222a;
+    border-color: #33404d;
+    color: #e7ebf0;
   }
 
   th {
-    background: #1b1b1b;
+    background: #1b2128;
   }
 }
 
-@media (max-width: 768px) {
-  .wrapper {
-    width: 94%;
-  }
-
+@media (max-width: 900px) {
   .app-shell {
     grid-template-columns: 1fr;
     gap: 0.8rem;
@@ -287,7 +322,8 @@ th {
     overflow: visible;
   }
 
-  .course-title {
-    font-size: 1.7rem;
+  .home-grid,
+  .semester-grid {
+    grid-template-columns: 1fr;
   }
 }
