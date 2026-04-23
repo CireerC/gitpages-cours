@@ -34,8 +34,21 @@ Un site personnel pour centraliser les cours, resumes et references techniques.
 <section class="semester-grid">
   <article class="semester-card">
     <h3>S5</h3>
-    <p>1 cours reference actuellement.</p>
-    <a href="cours/S5/Algo%20En%20C/cookies.html">Algo en C - Cookies</a>
+    <p>8 cours references.</p>
+    <ul>
+      <li><a href="cours/S5/Algo%20En%20C/cookies.html">Algo en C - Cookies</a></li>
+      <li><a href="cours/S5/Algo%20En%20C/client_http.html">client http</a></li>
+      <li><a href="cours/S5/Algo%20En%20C/http_server.html">http server</a></li>
+      <li><a href="cours/S5/VaporMap/README.html">VaporMap - README</a></li>
+    </ul>
+  </article>
+  <article class="semester-card">
+    <h3>S6</h3>
+    <p>2 cours references.</p>
+    <ul>
+      <li><a href="cours/S6/Crypto/TP1%20Cryptographie%20Eric%20Sylvain.html">TP1 Cryptographie Eric Sylvain</a></li>
+      <li><a href="cours/S6/Projet/genofront.html">genofront</a></li>
+    </ul>
   </article>
 </section>
 

@@ -1,8 +1,8 @@
-(function () {
+﻿(function () {
   var storageKey = "gpc-theme";
   var root = document.documentElement;
 
-  /* ── Theme ──────────────────────────────────────────────────────────────── */
+  /* -- Theme ---------------------------------------------------------------- */
   function getPreferredTheme() {
     var saved = localStorage.getItem(storageKey);
     if (saved === "light" || saved === "dark") return saved;
@@ -22,7 +22,7 @@
     applyTheme(next);
   }
 
-  /* ── Reading progress bar ────────────────────────────────────────────────── */
+  /* -- Reading progress bar -------------------------------------------------- */
   function updateProgress() {
     var bar = document.getElementById("reading-progress");
     if (!bar) return;
@@ -32,7 +32,7 @@
     bar.style.width = pct + "%";
   }
 
-  /* ── Mobile sidebar toggle ───────────────────────────────────────────────── */
+  /* -- Mobile sidebar toggle ------------------------------------------------- */
   function initSidebarToggle() {
     var btn = document.getElementById("sidebar-toggle");
     var sidebar = document.getElementById("app-sidebar");
@@ -46,7 +46,7 @@
     });
   }
 
-  /* ── Init ────────────────────────────────────────────────────────────────── */
+  /* -- Init ------------------------------------------------------------------ */
   document.addEventListener("DOMContentLoaded", function () {
     applyTheme(getPreferredTheme());
     var themeBtn = document.getElementById("theme-toggle");
@@ -56,3 +56,5 @@
 
   window.addEventListener("scroll", updateProgress, { passive: true });
 })();
+
+

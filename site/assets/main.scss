@@ -1,10 +1,10 @@
----
+﻿---
 ---
 @import "minima";
 
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap");
 
-/* ── Tokens ────────────────────────────────────────────────────────────────── */
+/* -- Tokens ------------------------------------------------------------------ */
 :root,
 html[data-theme="light"] {
   --bg: #f7f5ef;
@@ -52,7 +52,7 @@ html[data-theme="dark"] {
   --badge-t-line: #4a2e1c;
 }
 
-/* ── Reset & Base ──────────────────────────────────────────────────────────── */
+/* -- Reset & Base ------------------------------------------------------------ */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -84,7 +84,7 @@ html[data-theme="dark"] body {
   color: var(--ink);
 }
 
-/* ── Minima overrides ──────────────────────────────────────────────────────── */
+/* -- Minima overrides -------------------------------------------------------- */
 .site-header,
 .site-footer {
   border-color: var(--line);
@@ -106,7 +106,7 @@ html[data-theme="dark"] body {
   padding: 1rem 0 1.5rem;
 }
 
-/* ── Reading progress bar ──────────────────────────────────────────────────── */
+/* -- Reading progress bar ---------------------------------------------------- */
 .reading-progress {
   position: fixed;
   top: 0;
@@ -120,7 +120,7 @@ html[data-theme="dark"] body {
   pointer-events: none;
 }
 
-/* ── App shell ─────────────────────────────────────────────────────────────── */
+/* -- App shell --------------------------------------------------------------- */
 .app-shell {
   display: grid;
   grid-template-columns: 300px minmax(0, 1fr);
@@ -128,7 +128,7 @@ html[data-theme="dark"] body {
   align-items: start;
 }
 
-/* ── Sidebar ───────────────────────────────────────────────────────────────── */
+/* -- Sidebar ----------------------------------------------------------------- */
 .app-sidebar {
   position: sticky;
   top: 1rem;
@@ -281,7 +281,7 @@ html[data-theme="dark"] body {
 
 /* Custom chevron via CSS */
 .sidebar-group summary::before {
-  content: "▸";
+  content: ">";
   font-size: 0.65rem;
   color: var(--muted);
   transition: transform 0.18s;
@@ -323,7 +323,7 @@ html[data-theme="dark"] body {
   line-height: 1.4;
 }
 
-/* ── Mobile sidebar toggle ─────────────────────────────────────────────────── */
+/* -- Mobile sidebar toggle --------------------------------------------------- */
 .sidebar-toggle {
   display: none;
   align-items: center;
@@ -346,12 +346,12 @@ html[data-theme="dark"] body {
   background: var(--sidebar-hover);
 }
 
-/* ── Main content area ─────────────────────────────────────────────────────── */
+/* -- Main content area ------------------------------------------------------- */
 .app-main {
   min-width: 0;
 }
 
-/* ── Breadcrumb ────────────────────────────────────────────────────────────── */
+/* -- Breadcrumb -------------------------------------------------------------- */
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
@@ -380,7 +380,7 @@ html[data-theme="dark"] body {
   pointer-events: none;
 }
 
-/* ── Course sheet ──────────────────────────────────────────────────────────── */
+/* -- Course sheet ------------------------------------------------------------ */
 .course-sheet {
   border: 1px solid var(--line);
   border-radius: 10px;
@@ -418,7 +418,7 @@ html[data-theme="dark"] body {
   align-items: center;
 }
 
-/* ── Badges ────────────────────────────────────────────────────────────────── */
+/* -- Badges ------------------------------------------------------------------ */
 .badge {
   border-radius: 999px;
   padding: 0.17rem 0.58rem;
@@ -446,7 +446,7 @@ html[data-theme="dark"] body {
   border: 1px solid var(--line);
 }
 
-/* ── Course & post content headings (fix: was only .post-content) ──────────── */
+/* -- Course & post content headings (fix: was only .post-content) ------------ */
 .course-content h1,
 .post-content h1,
 .course-content h2,
@@ -530,7 +530,7 @@ html[data-theme="dark"] body {
   margin: 1.5rem 0;
 }
 
-/* ── Home / Semester grids ─────────────────────────────────────────────────── */
+/* -- Home / Semester grids --------------------------------------------------- */
 .home-grid,
 .semester-grid {
   display: grid;
@@ -564,7 +564,7 @@ html[data-theme="dark"] body {
   transform: translateY(-2px);
 }
 
-/* ── Tables ────────────────────────────────────────────────────────────────── */
+/* -- Tables ------------------------------------------------------------------ */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -601,7 +601,7 @@ html[data-theme="dark"] tr:nth-child(even) td {
   background: rgba(208, 117, 82, 0.07);
 }
 
-/* ── Code ──────────────────────────────────────────────────────────────────── */
+/* -- Code -------------------------------------------------------------------- */
 code,
 pre,
 .highlight {
@@ -649,7 +649,7 @@ pre code,
   font-size: inherit;
 }
 
-/* ── Blockquote ────────────────────────────────────────────────────────────── */
+/* -- Blockquote -------------------------------------------------------------- */
 blockquote {
   border-left: 4px solid var(--accent);
   background: var(--accent-soft);
@@ -672,7 +672,7 @@ html[data-theme="dark"] blockquote {
   color: var(--ink);
 }
 
-/* ── Links ─────────────────────────────────────────────────────────────────── */
+/* -- Links ------------------------------------------------------------------- */
 a {
   color: var(--accent);
   text-decoration: none;
@@ -692,7 +692,7 @@ a:hover {
   border-bottom: none;
 }
 
-/* ── Scrollbar ─────────────────────────────────────────────────────────────── */
+/* -- Scrollbar --------------------------------------------------------------- */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -711,7 +711,7 @@ a:hover {
   background: var(--muted);
 }
 
-/* ── Responsive ────────────────────────────────────────────────────────────── */
+/* -- Responsive -------------------------------------------------------------- */
 @media (max-width: 900px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -752,7 +752,7 @@ a:hover {
   }
 }
 
-/* ── Print ─────────────────────────────────────────────────────────────────── */
+/* -- Print ------------------------------------------------------------------- */
 @media print {
   .app-sidebar,
   .site-header,
@@ -778,3 +778,5 @@ a:hover {
     border-bottom: none;
   }
 }
+
+

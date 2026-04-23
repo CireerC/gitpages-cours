@@ -1,4 +1,4 @@
----
+﻿---
 layout: app
 ---
 
@@ -7,10 +7,10 @@ layout: app
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <a href="{{ '/' | relative_url }}">Accueil</a>
     {% if page.semestre %}
-    <span class="breadcrumb-sep" aria-hidden="true">›</span>
+    <span class="breadcrumb-sep" aria-hidden="true">></span>
     <span>{{ page.semestre }}</span>
     {% endif %}
-    <span class="breadcrumb-sep" aria-hidden="true">›</span>
+    <span class="breadcrumb-sep" aria-hidden="true">></span>
     <span>{{ page.title }}</span>
   </nav>
 
@@ -37,3 +37,5 @@ layout: app
   </section>
 
 </article>
+
+

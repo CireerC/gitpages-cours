@@ -21,7 +21,8 @@ Bibliotheque personnelle de cours et de ressources, prete pour GitHub Pages.
    - type (`tronc commun`, `dev`, `cybersecurite`, `data`, `iot`, `reseaux`, ...),
    - mini plan,
    - resume complet.
-4. Ajouter le lien du cours dans `site/index.md`.
+4. Ajouter le cours dans `site/_data/navigation.yml` pour le menu gauche.
+5. Optionnel: ajouter aussi un lien dans `site/index.md`.
 
 ## Publication
 

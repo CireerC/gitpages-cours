@@ -1,4 +1,4 @@
-home:
+﻿home:
   title: "Accueil"
   url: "/"
 
@@ -8,6 +8,35 @@ semesters:
       - title: "Algo en C - Cookies"
         type: "dev"
         url: "/cours/S5/Algo%20En%20C/cookies.html"
+      - title: "client http"
+        type: "cours"
+        url: "/cours/S5/Algo%20En%20C/client_http.html"
+      - title: "developpement"
+        type: "cours"
+        url: "/cours/S5/VaporMap/developpement.html"
+      - title: "environnement mac"
+        type: "cours"
+        url: "/cours/S5/Algo%20En%20C/misc/environnement_mac.html"
+      - title: "environnement windows"
+        type: "cours"
+        url: "/cours/S5/Algo%20En%20C/misc/environnement_windows.html"
+      - title: "http server"
+        type: "cours"
+        url: "/cours/S5/Algo%20En%20C/http_server.html"
+      - title: "README"
+        type: "cours"
+        url: "/cours/S5/VaporMap/README.html"
+      - title: "tutoriel esipoint"
+        type: "cours"
+        url: "/cours/S5/Algo%20En%20C/misc/tutoriel-esipoint.html"
+  - semestre: "S6"
+    courses:
+      - title: "genofront"
+        type: "cours"
+        url: "/cours/S6/Projet/genofront.html"
+      - title: "TP1 Cryptographie Eric Sylvain"
+        type: "cours"
+        url: "/cours/S6/Crypto/TP1%20Cryptographie%20Eric%20Sylvain.html"
 
 resources:
   - title: "Guide d'ajout de cours"
