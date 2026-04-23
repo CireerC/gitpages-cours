@@ -1,0 +1,14 @@
+home:
+  title: "Accueil"
+  url: "/"
+
+semesters:
+  - semestre: "S5"
+    courses:
+      - title: "Algo en C - Cookies"
+        type: "dev"
+        url: "/cours/S5/Algo%20En%20C/cookies.html"
+
+resources:
+  - title: "Guide d'ajout de cours"
+    url: "/#ajouter-un-cours"
