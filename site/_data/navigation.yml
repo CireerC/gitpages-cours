@@ -105,6 +105,18 @@ semesters:
         type: "théorie"
         url: "/cours/S6/Theorie-Information/index.html"
 
+  - semestre: "S7"
+    courses:
+      - title: "Vue d'ensemble S7"
+        type: "index"
+        url: "/cours/S7/index.html"
+
+  - semestre: "S8"
+    courses:
+      - title: "Vue d'ensemble S8"
+        type: "index"
+        url: "/cours/S8/index.html"
+
 resources:
   - title: "Guide d'ajout de cours"
     url: "/#ajouter-un-cours"
