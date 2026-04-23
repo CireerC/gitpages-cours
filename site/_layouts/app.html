@@ -2,6 +2,18 @@
 layout: default
 ---
 
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("gpc-theme");
+      if (!t) {
+        t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+
 <div class="app-shell">
   <aside class="app-sidebar">
     {% include sidebar.html %}
@@ -11,3 +23,5 @@ layout: default
     {{ content }}
   </main>
 </div>
+
+<script src="{{ '/assets/theme-toggle.js' | relative_url }}"></script>
