@@ -1,4 +1,5 @@
 <nav class="sidebar-nav" aria-label="Navigation des cours">
+
   <div class="profile-card">
     <p class="profile-eyebrow">Bibliotheque personnelle</p>
     <h2 class="profile-name">{{ site.title }}</h2>
@@ -8,7 +9,7 @@
     </button>
   </div>
 
-  <h2 class="sidebar-title">Menu des cours</h2>
+  <p class="sidebar-section-title">Navigation</p>
 
   <a
     class="sidebar-link {% if page.url == '/' %}active{% endif %}"
@@ -17,6 +18,9 @@
     {{ site.data.navigation.home.title }}
   </a>
 
+  {% if site.data.navigation.semesters %}
+  <p class="sidebar-section-title">Cours</p>
+
   {% for sem in site.data.navigation.semesters %}
   <details class="sidebar-group" open>
     <summary>{{ sem.semestre }}</summary>
@@ -24,7 +28,10 @@
       {% for course in sem.courses %}
       {% assign is_active = page.url == course.url %}
       <li>
-        <a class="{% if is_active %}active{% endif %}" href="{{ course.url | relative_url }}">
+        <a
+          class="{% if is_active %}active{% endif %}"
+          href="{{ course.url | relative_url }}"
+        >
           {{ course.title }}
           {% if course.type %}
           <span class="course-type">{{ course.type }}</span>
@@ -35,10 +42,12 @@
     </ul>
   </details>
   {% endfor %}
+  {% endif %}
 
   {% if site.data.navigation.resources %}
+  <p class="sidebar-section-title">Ressources</p>
   <details class="sidebar-group" open>
-    <summary>Ressources</summary>
+    <summary>Liens utiles</summary>
     <ul>
       {% for res in site.data.navigation.resources %}
       <li><a href="{{ res.url | relative_url }}">{{ res.title }}</a></li>
@@ -46,4 +55,5 @@
     </ul>
   </details>
   {% endif %}
+
 </nav>

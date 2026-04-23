@@ -14,8 +14,20 @@ layout: default
   })();
 </script>
 
+<div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+
 <div class="app-shell">
-  <aside class="app-sidebar">
+  <aside class="app-sidebar" id="app-sidebar">
+    <button
+      class="sidebar-toggle"
+      id="sidebar-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="app-sidebar"
+    >
+      <span aria-hidden="true">&#9776;</span>
+      <span class="toggle-label">Menu des cours</span>
+    </button>
     {% include sidebar.html %}
   </aside>
 
