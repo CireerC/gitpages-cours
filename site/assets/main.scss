@@ -588,6 +588,8 @@ table {
   overflow: hidden;
   background: var(--paper);
   font-size: 0.93rem;
+  /* Override Minima's static lighten(#111, 18%) which rend le texte invisible en dark mode */
+  color: var(--ink);
 }
 
 th {
@@ -596,6 +598,7 @@ th {
   font-weight: 600;
   text-align: left;
   padding: 0.6rem 0.8rem;
+  border: none;
 }
 
 html[data-theme="dark"] th {
@@ -604,7 +607,9 @@ html[data-theme="dark"] th {
 
 td {
   padding: 0.5rem 0.8rem;
+  border: none;
   border-bottom: 1px solid var(--line);
+  color: var(--ink);
 }
 
 tr:nth-child(even) td {
