@@ -645,6 +645,7 @@ html[data-theme="dark"] :not(pre) > code {
 }
 
 pre,
+.highlight,
 .highlight pre {
   background: var(--code-bg);
   color: var(--code-ink);
