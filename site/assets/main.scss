@@ -593,8 +593,8 @@ table {
 }
 
 th {
-  background: #2e434a;
-  color: #f7f8f9;
+  background: #2e434a !important;
+  color: #f7f8f9 !important;
   font-weight: 600;
   text-align: left;
   padding: 0.6rem 0.8rem;
@@ -602,8 +602,8 @@ th {
 }
 
 html[data-theme="dark"] th {
-  background: #1d2d38;
-  color: var(--ink);
+  background: #1d2d38 !important;
+  color: var(--ink) !important;
 }
 
 td {
