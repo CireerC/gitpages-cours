@@ -26,10 +26,9 @@
     <summary>{{ sem.semestre }}</summary>
     <ul>
       {% for course in sem.courses %}
-      {% assign is_active = page.url == course.url %}
       <li>
         <a
-          class="{% if is_active %}active{% endif %}"
+          class="{% if page.url == course.url %}active{% endif %}"
           href="{{ course.url | relative_url }}"
         >
           {{ course.title }}
