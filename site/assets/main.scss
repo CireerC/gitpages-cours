@@ -619,12 +619,12 @@ tr:nth-child(even) td {
 
 @media (prefers-color-scheme: dark) {
   tr:nth-child(even) td {
-    background: rgba(255, 255, 255, 0.05) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
   }
 }
 
 html[data-theme="dark"] tr:nth-child(even) td {
-  background: rgba(255, 255, 255, 0.05) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
 }
 
 /* -- Code -------------------------------------------------------------------- */
