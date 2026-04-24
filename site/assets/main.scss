@@ -618,7 +618,7 @@ tr:nth-child(even) td {
 }
 
 html[data-theme="dark"] tr:nth-child(even) td {
-  background: rgba(208, 117, 82, 0.07);
+  background: rgba(255, 255, 255, 0.05) !important;
 }
 
 /* -- Code -------------------------------------------------------------------- */
