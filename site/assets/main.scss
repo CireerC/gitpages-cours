@@ -613,17 +613,17 @@ td {
   color: var(--ink);
 }
 
-tr:nth-child(even) td {
-  background: rgba(248, 235, 227, 0.22);
+tr:nth-child(even) {
+  background: rgba(248, 235, 227, 0.22) !important;
 }
 
 @media (prefers-color-scheme: dark) {
-  tr:nth-child(even) td {
+  tr:nth-child(even) {
     background: rgba(255, 255, 255, 0.08) !important;
   }
 }
 
-html[data-theme="dark"] tr:nth-child(even) td {
+html[data-theme="dark"] tr:nth-child(even) {
   background: rgba(255, 255, 255, 0.08) !important;
 }
 
