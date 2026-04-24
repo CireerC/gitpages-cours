@@ -2,6 +2,10 @@ title: "GitPages Cours"
 description: "Bibliothèque personnelle de cours et de ressources — école d'ingénieur S5 à S8"
 lang: fr
 
+# URL de base pour GitHub Pages (cireerc.github.io/gitpages-cours)
+url: "https://cireerc.github.io"
+baseurl: "/gitpages-cours"
+
 theme: minima
 markdown: kramdown
 highlighter: rouge
