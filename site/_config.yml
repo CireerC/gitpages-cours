@@ -1,8 +1,28 @@
 title: "GitPages Cours"
-description: "Bibliotheque personnelle de cours et de ressources"
+description: "Bibliothèque personnelle de cours et de ressources — école d'ingénieur S5 à S8"
+lang: fr
+
 theme: minima
 markdown: kramdown
 highlighter: rouge
+
 kramdown:
   input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
 header_pages: []
+
+# Ne pas publier les dossiers de travail et templates
+exclude:
+  - "_templates"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "*.gemspec"
+  - ".bundle"
+  - "vendor"
+  - "node_modules"
+
+# Minifier le CSS généré par Sass
+sass:
+  style: compressed

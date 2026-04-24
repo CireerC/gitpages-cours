@@ -42,7 +42,8 @@
       var isOpen = sidebar.classList.contains("open");
       sidebar.classList.toggle("open", !isOpen);
       btn.setAttribute("aria-expanded", String(!isOpen));
-      btn.querySelector(".toggle-label").textContent = isOpen ? "Menu des cours" : "Fermer le menu";
+      var label = btn.querySelector(".toggle-label");
+      if (label) label.textContent = isOpen ? "Menu des cours" : "Fermer le menu";
     });
   }
 

@@ -205,7 +205,7 @@ title: "Accueil"
 
 <!-- ══════════════════════════════ GUIDE ══════════════════════════════════ -->
 <div class="guide-card" id="ajouter-un-cours">
-  <p class="guide-card-title">📎 Ajouter un cours</p>
+  <p class="guide-card-title"><span aria-hidden="true">📎 </span>Ajouter un cours</p>
   <ol>
     <li>Copier <code>site/_templates/template_cours.md</code>.</li>
     <li>Créer le dossier <code>site/cours/SX/Nom-Du-Cours/</code> et y placer <code>index.md</code>.</li>

@@ -14,14 +14,18 @@ layout: default
   })();
 </script>
 
-<!-- KaTeX -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<!-- KaTeX — CSS chargée en non-bloquant (preload) -->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" as="style"
+  crossorigin="anonymous" onload="this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+</noscript>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"
   onload="renderMathInElement(document.body, {
     delimiters: [
       {left: '$$', right: '$$', display: true},
-      {left: '$', right: '$', display: false},
+      {left: '$',  right: '$',  display: false},
       {left: '\\(', right: '\\)', display: false},
       {left: '\\[', right: '\\]', display: true}
     ]
@@ -50,3 +54,4 @@ layout: default
 </div>
 
 <script src="{{ '/assets/theme-toggle.js' | relative_url }}"></script>
+<script src="{{ '/assets/toc.js' | relative_url }}"></script>

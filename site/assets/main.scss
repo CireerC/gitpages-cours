@@ -2,7 +2,7 @@
 ---
 @import "minima";
 
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap");
 
 /* -- Tokens ------------------------------------------------------------------ */
 :root,
@@ -170,7 +170,7 @@ html[data-theme="dark"] body {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  font-size: 0.69rem;
+  font-size: 0.72rem;
   color: var(--muted);
 }
 
@@ -184,7 +184,7 @@ html[data-theme="dark"] body {
 .profile-bio {
   margin: 0 0 0.6rem;
   color: var(--ink);
-  font-size: 0.87rem;
+  font-size: 0.875rem;
   line-height: 1.4;
 }
 
@@ -231,7 +231,7 @@ html[data-theme="dark"] body {
   border-radius: 6px;
   padding: 0.36rem 0.5rem;
   margin-bottom: 0.14rem;
-  font-size: 0.92rem;
+  font-size: 0.875rem;
   transition: background 0.12s, border-color 0.12s, color 0.12s;
 }
 
@@ -1201,17 +1201,43 @@ html[data-theme="dark"] .hero-stats {
 }
 
 /* Responsive home */
+/* Tablette portrait */
+@media (max-width: 768px) {
+  .hero {
+    padding: 1.5rem 1.4rem 1.3rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .sem-heading {
+    font-size: 0.98rem;
+  }
+
+  .course-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .course-toc {
+    position: static;
+    max-height: none;
+    order: -1;
+    margin-bottom: 1rem;
+  }
+}
+
 @media (max-width: 640px) {
   .course-list {
     grid-template-columns: 1fr;
   }
 
   .hero {
-    padding: 1.4rem 1.2rem 1.2rem;
+    padding: 1.3rem 1rem 1.1rem;
   }
 
   .hero-title {
-    font-size: 1.6rem;
+    font-size: 1.55rem;
   }
 
   .hero-stats {
@@ -1219,7 +1245,51 @@ html[data-theme="dark"] .hero-stats {
   }
 
   .hero-stat-value {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
+}
+
+/* ============================================================
+   LIENS EN COURS DE RÉDACTION (WIP)
+   ============================================================ */
+
+.wip-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  padding: 0.65rem 0.9rem;
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 7px;
+  font-size: 0.86rem;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+  line-height: 1.45;
+}
+
+.wip-notice-icon {
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+/* Cartes désactivées dans une grille WIP */
+.wip-grid .course-card {
+  opacity: 0.42;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(0.35);
+}
+
+/* Badge "à venir" optionnel */
+.badge-wip {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  font-size: 0.65rem;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
