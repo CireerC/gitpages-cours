@@ -646,7 +646,8 @@ html[data-theme="dark"] :not(pre) > code {
 
 pre,
 .highlight,
-.highlight pre {
+.highlight pre,
+.highlighter-rouge .highlight {
   background: var(--code-bg);
   color: var(--code-ink);
   border: 1px solid rgba(255, 255, 255, 0.07);
